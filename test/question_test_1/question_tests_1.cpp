@@ -10,3 +10,11 @@ TEST_CASE("test")
 {
 	REQUIRE(test_config() == true);
 }
+
+TEST_CASE("Test Get Sales Commission Function")
+{
+	REQUIRE(get_sales_commission(100) == 5.0);
+	REQUIRE(get_sales_commission(750) == 45.0);
+	REQUIRE(get_sales_commission(1100) == 77.0);
+	REQUIRE(get_sales_commission(1750) == 140.0);
+}
